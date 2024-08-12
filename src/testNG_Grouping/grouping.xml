@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name = "groupingsuite">
+	<test name = "groupingtest">
+		
+		<groups>
+			<run>
+				<include name = "sanity"/>
+				<exclude name = "regression"/> <!--I want to execute only sanity not regreesion-->
+			</run>
+		</groups>
+		
+		<classes>
+			<class name = "testNG_Grouping.loginTest"/>
+			<class name = "testNG_Grouping.SignUpTest"/>
+			<class name = "testNG_Grouping.PaymentTest"/>
+		</classes>
+		
+	</test>
+	
+	
+</suite>
